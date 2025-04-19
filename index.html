@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miadi Bakers - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("5Ud5UHXYVW7BVDiw-"); // Replace "YOUR_USER_ID" with your EmailJS User ID
+        })();
+    </script>
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay">
+            <h1 class="company-name">Miadi Bakers</h1>
+            <p class="tagline">Delicious Bakes for Every Occasion</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="description">
+            <h2>About Us</h2>
+            <p>Welcome to Miadi Bakers! We specialize in baking the freshest and most delicious treats for all occasions. Whether you're celebrating a birthday, wedding, or just craving something sweet, Miadi Bakers has you covered.</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Email: supportmuigufranklyne001@gmail.com</p>
+            <p>Phone: (+123) 456-7890</p>
+            <p>Address: 123 Baker's Lane, Sweet City</p>
+        </section>
+
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review-form">
+                <h3>Leave a Review</h3>
+                <form id="reviewForm" onsubmit="sendReview(event)">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="rating">Rating (1-5)</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="reviewsDisplay">
+                <!-- Reviews will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Miadi Bakers. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
