@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Miadi Bakers</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Order!</h1>
+        <p>Your order has been successfully placed. Below are the details of your order.</p>
+    </header>
+
+    <main>
+        <section class="order-summary">
+            <h2>Order Summary</h2>
+            <div id="orderDetails">
+                <!-- Order details will be dynamically populated -->
+            </div>
+            <h3>Total: $<span id="orderTotal">0</span></h3>
+        </section>
+
+        <section class="delivery-details">
+            <h2>Delivery Information</h2>
+            <p id="deliveryAddress">Address: Not provided</p>
+        </section>
+
+        <button onclick="goToHome()">Back to Home</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Miadi Bakers. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const order = JSON.parse(localStorage.getItem("order")) || {};
+            const orderDetailsDiv = document.getElementById("orderDetails");
+            const orderTotalSpan = document.getElementById("orderTotal");
+            const deliveryAddress = document.getElementById("deliveryAddress");
+
+            if (order.items) {
+                order.items.forEach(item => {
+                    orderDetailsDiv.innerHTML += `
+                        <p>${item.name} (x${item.quantity}) - $${item.price * item.quantity}</p>
+                    `;
+                });
+                orderTotalSpan.textContent = order.total || "0";
+                deliveryAddress.textContent = `Address: ${order.address || "Not provided"}`;
+            } else {
+                orderDetailsDiv.innerHTML = "<p>No order details available.</p>";
+            }
+        });
+
+        function goToHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
