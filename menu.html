@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Miadi Bakers</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Menu</h1>
+        <p>Explore our delicious offerings and add your favorites to the cart!</p>
+    </header>
+
+    <main>
+        <!-- Pastries Section -->
+        <section class="menu-category">
+            <h2>Pastries</h2>
+            <div class="menu-item">
+                <h3>Croissant</h3>
+                <img src="images/croissant.jpg" alt="Croissant">
+                <p>Price: Ksh 150</p>
+                <button onclick="addToCart('Croissant', 150)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <h3>Danish Pastry</h3>
+                <img src="images/danish-pastry.jpg" alt="Danish Pastry">
+                <p>Price: Ksh 200</p>
+                <button onclick="addToCart('Danish Pastry', 200)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <h3>Puff Pastry</h3>
+                <img src="images/puff-pastry.jpg" alt="Puff Pastry">
+                <p>Price: Ksh 250</p>
+                <button onclick="addToCart('Puff Pastry', 250)">Add to Cart</button>
+            </div>
+        </section>
+
+        <!-- Cakes Section -->
+        <section class="menu-category">
+            <h2>Cakes</h2>
+            <div class="menu-item">
+                <h3>Chocolate Cake</h3>
+                <img src="images/chocolate-cake.jpg" alt="Chocolate Cake">
+                <p>Price: Ksh 1500</p>
+                <button onclick="addToCart('Chocolate Cake', 1500)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <h3>Vanilla Sponge Cake</h3>
+                <img src="images/vanilla-sponge-cake.jpg" alt="Vanilla Sponge Cake">
+                <p>Price: Ksh 1200</p>
+                <button onclick="addToCart('Vanilla Sponge Cake', 1200)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <h3>Red Velvet Cake</h3>
+                <img src="images/red-velvet-cake.jpg" alt="Red Velvet Cake">
+                <p>Price: Ksh 1800</p>
+                <button onclick="addToCart('Red Velvet Cake', 1800)">Add to Cart</button>
+            </div>
+        </section>
+
+        <!-- Breads Section -->
+        <section class="menu-category">
+            <h2>Breads</h2>
+            <div class="menu-item">
+                <h3>Whole Wheat Bread</h3>
+                <img src="images/whole-wheat-bread.jpg" alt="Whole Wheat Bread">
+                <p>Price: Ksh 100</p>
+                <button onclick="addToCart('Whole Wheat Bread', 100)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <h3>White Bread</h3>
+                <img src="images/white-bread.jpg" alt="White Bread">
+                <p>Price: Ksh 80</p>
+                <button onclick="addToCart('White Bread', 80)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <h3>Multigrain Bread</h3>
+                <img src="images/multigrain-bread.jpg" alt="Multigrain Bread">
+                <p>Price: Ksh 150</p>
+                <button onclick="addToCart('Multigrain Bread', 150)">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Miadi Bakers. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
